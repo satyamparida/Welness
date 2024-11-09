@@ -7,7 +7,7 @@ import api_key
 app = Flask(__name__)
 
 # Set your API key directly
-API_KEY = api_key.api_key
+API_KEY = "AIzaSyDP_kZivKCs5ETnkl480_Kx_iZVtx8mB6M"
 genai.configure(api_key=API_KEY)
 
 # Route to render the main page
@@ -195,9 +195,7 @@ def gemini_response():
    - "Connecting with supportive friends or family can provide a great deal of comfort."
 
 Make sure your responses are supportive, encouraging, and provide evidence-based recommendations. When generating responses, always incorporate these elements to create a therapeutic and supportive environment for the user.
-
-
-               "Make sure your responses are supportive, encouraging, and provide evidence-based recommendations.''' + user_input)
+''' + user_input)
         return jsonify({"response": response.text})
     except Exception as e:
         return jsonify({"response": f"An error occurred: {e}"}), 500
